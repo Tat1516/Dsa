@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int i,j;
+    int marks[5];
+    int smallest;
+    int largest;
+        cout<<"Enter the marks:"<<endl;
+    for(i=0;i<sizeof(marks)/sizeof(int);i++){
+        cin>>marks[i];
+    }
+      smallest = INT_MAX;
+         largest = INT_MIN;
+    for(j=0;j<5;j++){
+         largest = max(marks[j],largest);
+         smallest = min(marks[j],smallest);
+    }
+
+    cout<<"Smallest value- "<<smallest<<endl;
+     cout<<"largest value- "<<largest<<endl;
+
+     for(int k=0;k<5;k++){
+        if(smallest==marks[k])
+            cout<<"smallest index ="<<k<<endl;
+        if(largest==marks[k])
+            cout<<"largest index ="<<k<<endl;
+     }
+
+
+}
