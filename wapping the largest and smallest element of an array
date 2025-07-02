@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int arr[]={643,4,4,3,2,4,2,3,-87};
+  int size=9;
+  int i,j,k,l,y,n;
+  int lar=0;
+  int small=0;
+
+  for(i=0;i<9;i++)
+  {
+      lar=max(arr[i],lar);
+      small=min(arr[i],small);
+  }
+  cout<<"max ans min is"<<small<<endl<<lar<<endl;
+
+  for(k=0;k<9;k++){
+    if(arr[k]==lar){
+            n=k;
+        cout<<"index max"<<k<<endl;
+    }
+  }
+
+  for(l=0;l<9;l++){
+     if(arr[l]==small){
+            y=l;
+         cout<<"index min"<<l<<endl;
+    }
+  }
+
+  swap(arr[n],arr[y]);
+
+  for(int m=0;m<9;m++){
+    cout<<"After array:"<<arr[m]<<endl;
+  }
+}
