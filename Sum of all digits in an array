@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main(){
+
+    int arr[]={5,3,56,76,43,45,65,-86,34,45};
+    int i,j=0;
+
+    for(i=0;i<sizeof(arr)/sizeof(int);i++)
+        {
+        j= j+arr[i];
+    }
+    cout<<"sum is:"<<j<<endl;
+
+}
